@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "8833b266-bc6e-4c4f-ba88-0a0726c05495",
+		"name": "bk-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7583512"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"emmizokwizera@gmail.com\",\n    \"password\":\"Kwizera23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add job post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8000/api/jobPost",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"jobPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of job available",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "change status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTdlYjYwNTI2MWE0YTdiYjZiM2I3NWY2ZjBkZGI1NTViNmRjOTE5NmE5YjQ0YmJmNWM3ODY0ZmVhZTgzNzU3N2MyZDk5ZDFiYjhkYzgwMWIiLCJpYXQiOjE2NjY1MTcxNTkuMDEwODE0LCJuYmYiOjE2NjY1MTcxNTkuMDEwODE4LCJleHAiOjE2OTgwNTMxNTguOTY2MjAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.X0oqx8QHtUybnJ2rF4HGUO_L9owNzMsxbz2qSb6pXr1CXOZbJuuKagLw5ydGx1ITKHXtvcKD_fZKCI2IEzHUBez2N9pXF71xgA99MUs2Qr9zjrWcsfmK34hm0f_eVqBjdISka9VzGkrIvc5tk4oJzsOXPQuhoI1QsmSUxLNhsaLitXXYLze6xQcQ9iO4u1uB1i3Huu3SOkACKo88w7PdkQ8t7SzgZgidY77E2umV-n6xcGe4-l6BvDiiL5-E6ulWFgorMDnj0itzcgw0-wxqR8n4uAAmmyykBdZiE0uAviJx9nrEBCIOm7-2p_FDXxroQ_xjXmqh1pKWrIjwvLeoXaQ4rfuPof1HLsrUcpr9NgBMU47lWpfpkI5nIgj2WckihgEv1JHO2tkObYswaUf5kCxJAIkriHFkRTKvDPDXYmDGLei9kTj_qPiMauZqIFcVZdMwAbUUwlrkPBicrK3_WAJz5ku3frmo81ldUgq8M_jg5qtU6NHazKrpk0d68PD4PvVqeaQvGCg0x82eyn4e8F_EqBtzw_3kFA64QMpkbfS_DsKgRfpa3Q9nWlyThlGmVSCZmnpbQxn14nD9D7XTKRxir9FT_sd25suudQ8npmsg6b9uYEuCy_sQrIU4NcVWVv6Q9TgUbRSAbMxPK95x5XJEu7pwt2TlNmH4X5GWld4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/changeJobStatus",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"changeJobStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apply",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullname",
+							"value": "Muganga Maurice",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0781167275",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "emmizokwizera@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "cv",
+							"type": "file",
+							"src": "/Users/kwizera/Documents/My Docs/Emmanuel's Resume.pdf"
+						},
+						{
+							"key": "job_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/apply",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of application",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTdlYjYwNTI2MWE0YTdiYjZiM2I3NWY2ZjBkZGI1NTViNmRjOTE5NmE5YjQ0YmJmNWM3ODY0ZmVhZTgzNzU3N2MyZDk5ZDFiYjhkYzgwMWIiLCJpYXQiOjE2NjY1MTcxNTkuMDEwODE0LCJuYmYiOjE2NjY1MTcxNTkuMDEwODE4LCJleHAiOjE2OTgwNTMxNTguOTY2MjAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.X0oqx8QHtUybnJ2rF4HGUO_L9owNzMsxbz2qSb6pXr1CXOZbJuuKagLw5ydGx1ITKHXtvcKD_fZKCI2IEzHUBez2N9pXF71xgA99MUs2Qr9zjrWcsfmK34hm0f_eVqBjdISka9VzGkrIvc5tk4oJzsOXPQuhoI1QsmSUxLNhsaLitXXYLze6xQcQ9iO4u1uB1i3Huu3SOkACKo88w7PdkQ8t7SzgZgidY77E2umV-n6xcGe4-l6BvDiiL5-E6ulWFgorMDnj0itzcgw0-wxqR8n4uAAmmyykBdZiE0uAviJx9nrEBCIOm7-2p_FDXxroQ_xjXmqh1pKWrIjwvLeoXaQ4rfuPof1HLsrUcpr9NgBMU47lWpfpkI5nIgj2WckihgEv1JHO2tkObYswaUf5kCxJAIkriHFkRTKvDPDXYmDGLei9kTj_qPiMauZqIFcVZdMwAbUUwlrkPBicrK3_WAJz5ku3frmo81ldUgq8M_jg5qtU6NHazKrpk0d68PD4PvVqeaQvGCg0x82eyn4e8F_EqBtzw_3kFA64QMpkbfS_DsKgRfpa3Q9nWlyThlGmVSCZmnpbQxn14nD9D7XTKRxir9FT_sd25suudQ8npmsg6b9uYEuCy_sQrIU4NcVWVv6Q9TgUbRSAbMxPK95x5XJEu7pwt2TlNmH4X5GWld4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/application",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accept or drop application",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
